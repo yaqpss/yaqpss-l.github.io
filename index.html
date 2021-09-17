@@ -7,12 +7,8 @@
    <link type="application/json+oembed" href="https://valentino.lol/js/embed.json"/>
    <meta name="twitter:card" content="player"> <meta name="twitter:player" content="https://valentino.lol/wakeup.webm"> <meta name="twitter:player:stream" content="https://valentino.lol/wakeup.webm"> <meta name="twitter:player:stream:content_type" content="video/mp4">
    <link rel="icon" href="favicon.ico" type="image/x-icon">
-   <audio src="js/audio.mp3"></audio>
 </head>
 <body>
-	<audio id="audio" loop>
-        <source src="js/audio.mp3" type="audio/mp3">
-	</audio>
     <div class="brandon">
         listening to
 	<a id="tracktitle" class="anim"></a>
@@ -21,21 +17,22 @@
         on spotify
     </div>
 <br>
+click for musica
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" type="text/javascript"></script>
   <script src="/js/jquery.marquee.min.js"></script>
   <script src="/js/lfmnp.js"></script>
   <script src="/js/app.js"></script>
   <script src="/js/title.js"></script>
-  <script>
-  	var audio = document.getElementById("audio");
- 	 audio.volume = 0.01;
-</script>
-   <script>
-     function play() {
-       var audio = document.getElementById("audio");
-       audio.play();
-      }
-	</script>
+<script>
+        // Store your current icon
+        var current = 0;
+        var icons = ['https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/285/weary-face_1f629.png', 'https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/285/smiling-face-with-sunglasses_1f60e.png', 'https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/285/face-exhaling_1f62e-200d-1f4a8.png', 'https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/285/hot-face_1f975.png', 'https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/285/sparkling-heart_1f496.png', 'https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/285/drooling-face_1f924.png'];
+        setInterval(function () {
+            var icon = (++current % icons.length);
+            var url = icons[icon];
+            document.getElementById('icon-a').href = url;
+        }, 2000);
+    </script>
 </body>
 </html>
