@@ -1,14 +1,30 @@
 <!doctype html>
 <html>
 <title>lmao gottem</title>
-<meta name="twitter:card" content="summary">
-<meta name="twitter:description" content="vals top 10 animes (no its not just naruto)">
-<meta name="twitter:image" content="https://64.media.tumblr.com/245e1dd0a0522ce16a011878726896e4/tumblr_inline_nl5noj41HV1sptc1c.gif">
+<meta property="og:title" content="animes" />
+<meta property="og:type" content="website" />
+<meta property="og:description" content="(no its not just naruto)" />
+<meta property="og:image" content="https://64.media.tumblr.com/245e1dd0a0522ce16a011878726896e4/tumblr_inline_nl5noj41HV1sptc1c.gif" />
+<meta property="og:image:type" content="image/gif" />
+<meta property="og:image:width" content="500" />
+<meta property="og:image:height" content="281" />
+<meta property="og:url" content="https://valentino.lol" />
+<meta property="twitter:card" content="summary_large_image" />
+<meta name="theme-color" content="#ADD8E6">
 
-<body>
-<video width="1080" height="720" controls autoplay>
-  <source src="https://valentino.lol/vids/lol.mp4" type="video/mp4">
-</video>
+<body onclick="toggleMute()">
+<script>
+    function toggleMute() {
 
+var video=document.getElementById("myVideo");
+
+video.muted = !video.muted;
+
+}
+</script>
+
+<video autoplay muted loop id="myVideo">
+    <source src="https://valentino.lol/vids/lol.mp4" type="video/mp4">
+  </video>
 </body>
 </html>
