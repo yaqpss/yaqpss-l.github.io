@@ -26,3 +26,6 @@ window.addEventListener("keydown", (event) => {
      body[0].innerHTML = "😐";
   }
 });
+document.addEventListener('contextmenu', function(e) {
+  e.preventDefault();
+});
