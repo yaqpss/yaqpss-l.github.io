@@ -12,25 +12,21 @@
    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
 </head>
 <style>
-    .loader.clock {
-    position: relative;
-    width: var(--loader-width, 100px);
-    height: var(--loader-height, 100px);
-    border-radius: 50%;
-    border: var(--line-width, 4px) solid var(--loader-color-primary, #33f);
-}
-
-.loader.clock::before{
-    content: '';
-    position: absolute;
-    top: 8px;    
-    left: calc(50% - 2px);
-    background: var(--loader-color-primary, #33f);
-    width: var(--line-width, 4px);
-    height: calc( 50% - 8px );
-    border-radius: calc(var(--line-width, 4px) + 1);
-    transform-origin: 50% 100%;
-    animation: circle-loader var(--animation-duration,1s) infinite linear ;
+  a, div {
+    font-size: 16px;
+    text-transform: lowercase;
+    text-decoration: none;
+    text-align: center;
+    font-family: Nunito;
+    color: white;
+    animation: colorRotate .5s linear 0s infinite;
+    display: inline-block;
+  }
+  a {
+      color: pink;
+  }
+body {
+    background-color: black;
 }
 </style>
 <body>
@@ -47,6 +43,7 @@ click for musica
   <script src="/js/lfmnp.js"></script>
   <script src="/js/app.js"></script>
   <script src="/js/title.js"></script>
+  <script src="/js/disable.js"></script>
 <script>
         // Store your current icon
         var current = 0;
